@@ -17,7 +17,7 @@ export interface Question {
   category: string;
   difficulty: 'easy' | 'medium' | 'hard';
   options: QuestionOption[];
-  correctAnswerId: string;
+  correctAnswerId?: string;
   explanation?: string;
   createdBy: string;
   createdAt: Date;
@@ -28,6 +28,8 @@ export interface QuestionOption {
   id: string;
   text: string;
   value: string;
+  isCorrect?: boolean;
+  createdAt?: Date;
 }
 
 // Test/Quiz Types
@@ -59,7 +61,7 @@ export interface UserAnswer {
 }
 
 // API Response Types
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   success: boolean;
   data?: T;
   error?: string;

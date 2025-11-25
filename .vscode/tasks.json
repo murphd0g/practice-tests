@@ -13,8 +13,7 @@
           "line": 0
         },
         "background": {
-          "activeOnStart": true,
-          "watched": false
+          "activeOnStart": true
         }
       },
       "presentation": {
